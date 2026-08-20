@@ -1,17 +1,11 @@
-<<<<<<< HEAD
-#incldue <iostream>
-=======
 #include <iostream>
->>>>>>> 15315e9 (msg)
 using namespace std;
 
 int main()
 {
-<<<<<<< HEAD
-=======
-  cin>>"First Number: ">>int a;
-
->>>>>>> 15315e9 (msg)
-
+  int a,b;
+  cout<<"First Number: ";cin>>a;o
+  cout<<"Second Number: ";cin>>b;
+  cout<<"The sum of these two integers is: "<<a+b<<endl;
   return 0;
 }
