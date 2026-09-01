@@ -4,10 +4,17 @@ using namespace std;
 
 int main ()
 {
-  char let;
-  cout << "Enter character: ";
-  cin >> let;
-  string res = ('a' <= let && let <= 'z'||'A' <= let && let <= 'Z') ? "Letter." : "Not a letter.";
-  cout << res << endl;
+  int a, b; char jnk;
+  cout << "Values for a and b? "; cin >> a >> jnk >> b;
+  string op;
+  cout << "What do you want? "; cin >> op;
+  if (op == "add")
+	{
+		int add; string junk; char to; 
+    cin >> add >> junk >> to;
+		
+	}
+
+  cout << "a = " << a << " and b = " << b << endl;
   return 0;
 }
