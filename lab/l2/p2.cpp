@@ -9,7 +9,7 @@ int main ()
 	cout << "Enter a number between 0 and 15: "; cin >> num;
 	numSave = num;
 
-  // Process Number
+  // Process Number, Count Zeroes
 	int res = 0; string zeroes = ""; bool numStart = false;
   if ( (num-8) >= 0 ) { num -= 8; res += 1000; numStart = true; } else if ( !numStart ) { zeroes += '0'; }
   if ( (num-4) >= 0 ) { num -= 4; res += 100; numStart = true; } else if ( !numStart ) { zeroes += '0'; }
