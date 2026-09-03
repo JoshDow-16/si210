@@ -14,16 +14,20 @@ int main ()
 		b = type_b == 'B' ? ( b / 1000 )*8 + ( b % 1000 / 100 )*4 + ( b % 100 / 10 )*2 + ( b % 2 ) : b
     int res = a + b;
 
+		char res_type;
 		if ( res < 16 )
 		{
-			int res_bin = 0; string zeroes = ""; bool numStart = false;
+			int res_bin = 0; string zeroes = ""; bool numStart = false; res_type = 'B';
 		  if ( (num-8) >= 0 ) { res -= 8; res_bin += 1000; numStart = true; } else if ( !numStart ) { zeroes += '0'; }
   		if ( (num-4) >= 0 ) { res -= 4; res_bin += 100; numStart = true; } else if ( !numStart ) { zeroes += '0'; }
 		  if ( (num-2) >= 0 ) { res -= 2; res_bin += 10; numStart = true; } else if ( !numStart ) { zeroes += '0'; }
   		if ( (num-1) >= 0 ) { res_bin += 1; }
 		}
+		else { res_type = 'D'; }
   }
 	else {}
+
+	cout <<
 
   return 0;
 }
