@@ -24,6 +24,8 @@ int main ()
   		if ( (num-1) >= 0 ) { res_bin += 1; }
 		}
 		else { res_type = 'D'; }
+
+
   }
 	else {}
 
