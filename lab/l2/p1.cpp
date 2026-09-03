@@ -17,7 +17,6 @@ int main ()
   else if ( res < 4 ) { binString = "00" + to_string( bin ); }
   else if ( res < 8 ) { binString = "0" + to_string( bin ); }
   else { binString = to_string( bin ); }
-   
 
   // Output Result
 	cout << "In decimal " << binString << " = " << res << endl;

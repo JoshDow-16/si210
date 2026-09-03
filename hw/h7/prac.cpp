@@ -4,13 +4,13 @@ using namespace std;
 int main ()
 {
   // Prompt User
-  cout << "Enter Numbers: ";
+  cout << "Enter numbers separated by spaces and terminated with a negative number." << endl;
 
   // Iteratively Calc Max and Avg
   float num;
   cin >> num;
   float total = 0, max = num; int count = 0;
-  while ( num )
+  while ( num > 0 )
   {
     // Max
     if ( num > max ) { max = num; }
@@ -21,11 +21,12 @@ int main ()
     // Read Next Input
     cin >> num;
   }
+
   // Finalize Average
   float avg = total / count;
 
   // Output Result
-  cout << "Average is: " << avg << ", Maximum is: " << max << endl;
+	cout << "The average is " << avg << "\nThe maximum is " << max << endl;
 
   return 0;
 }
