@@ -11,7 +11,7 @@ int main ()
   // Process 4-Bit Binary
   int res = ( bin / 1000 )*8 + ( bin % 1000 / 100 )*4 + ( bin % 100 / 10 )*2 + ( bin % 2 );
 
-  // Chesse with Hard-Coding :(
+  // Cheese with Hard-Coding :(
   string binString;  
   if ( res < 2 ) { binString = "000" + to_string( bin ); }
   else if ( res < 4 ) { binString = "00" + to_string( bin ); }
