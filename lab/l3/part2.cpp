@@ -16,11 +16,11 @@ int main ()
 
 		if ( res < 16 )
 		{
-			int res = 0; string zeroes = ""; bool numStart = false;
-		  if ( (num-8) >= 0 ) { num -= 8; res += 1000; numStart = true; } else if ( !numStart ) { zeroes += '0'; }
-  		if ( (num-4) >= 0 ) { num -= 4; res += 100; numStart = true; } else if ( !numStart ) { zeroes += '0'; }
-		  if ( (num-2) >= 0 ) { num -= 2; res += 10; numStart = true; } else if ( !numStart ) { zeroes += '0'; }
-  		if ( (num-1) >= 0 ) { res += 1; }
+			int res_bin = 0; string zeroes = ""; bool numStart = false;
+		  if ( (num-8) >= 0 ) { res -= 8; res_bin += 1000; numStart = true; } else if ( !numStart ) { zeroes += '0'; }
+  		if ( (num-4) >= 0 ) { res -= 4; res_bin += 100; numStart = true; } else if ( !numStart ) { zeroes += '0'; }
+		  if ( (num-2) >= 0 ) { res -= 2; res_bin += 10; numStart = true; } else if ( !numStart ) { zeroes += '0'; }
+  		if ( (num-1) >= 0 ) { res_bin += 1; }
 		}
   }
 	else {}
