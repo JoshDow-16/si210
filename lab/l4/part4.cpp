@@ -16,6 +16,10 @@ int main ()
 
   // Processing Data
   float temp, avg, max = 0, min = 32; int count = 0; string dateMax, dateMin, date, dateCur;
+
+  // Formatting Cheese
+  bool firstLine = true; int notLast = 23;
+
   while ( file >> date >> junk >> temp )
   {
     temp = temp*1.8 + 32;
@@ -23,8 +27,15 @@ int main ()
     if ( temp > max ) { max = temp; dateMax = date; }
     if ( temp < min ) { min = temp; dateMin = date; }
 
-    if ( date != dateCur ) { dateCur = date; out << '\n' << date << '\t'; }
-    out << temp << '\t';
+    if ( date != dateCur )
+    {
+      dateCur = date;
+      if ( !firstLine ) { out << '\n'; } else { firstLine = false; }
+      out << date << '\t';
+    }
+
+    out << temp;
+    if ( notLast ) { out << '\t'; notLast--; } else { notLast = 23; }
 
     count++;
   }
@@ -34,6 +45,7 @@ int main ()
 
   // Housekeeping
   file.close();
+  out << endl;
   out.close();
 
   // Output Result
