@@ -24,7 +24,7 @@ int main ()
     if ( temp < min ) { min = temp; dateMin = date; }
 
     if ( date != dateCur ) { dateCur = date; out << '\n' << date << '\t'; }
-    out << '\t' << temp << '\t';
+    out << temp << '\t';
 
     count++;
   }
