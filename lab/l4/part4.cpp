@@ -13,18 +13,18 @@ int main ()
   ifstream file( fi ); ofstream out( o );
   if ( !file ) { cout << "Could not open file '" << fi << '\'' << endl; return 1; }
   string junk; file >> junk >> junk;
-  out << "day\thour\ttemp\n";
 
   // Processing Data
-  float temp, avg, max = 0, min = 32; int hour, count = 0; string dateMax, dateMin, date;
-  while ( file >> date >> hour >> junk >> temp )
+  float temp, avg, max = 0, min = 32; int count = 0; string dateMax, dateMin, date, dateCur;
+  while ( file >> date >> junk >> temp )
   {
     temp = temp*1.8 + 32;
     avg += temp;
     if ( temp > max ) { max = temp; dateMax = date; }
     if ( temp < min ) { min = temp; dateMin = date; }
 
-    out << date << '\t' << hour + 1 << '\t' << temp << '\n';
+    if ( date != dateCur ) { dateCur = date; out << '\n' << date << '\t'; }
+    out << '\t' << temp << '\t';
 
     count++;
   }
