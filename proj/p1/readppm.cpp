@@ -16,9 +16,8 @@ int main ()
   if ( fheader != "P3" ) { cout << "Wrong file type!" << endl; return 1; }
 
   // Processing
-  int width, height, max; file >> width >> height >> max;
+  int width, height, max, r, g, b; file >> width >> height >> max;
   cout << fheader << '\n' << "width = " << width << ", height = " << height << '\n' << "max value = " << max << endl;
-  int r, g, b;
   for ( int i = 0; i < height; i++ ) {
     cout << "*** row " << i << " ***" << endl;
     for ( int j = 0; j < width; j++ ) {

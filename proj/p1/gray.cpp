@@ -12,9 +12,19 @@ int main ()
 
   // Check File
   ifstream file( fi ); ofstream out( o );
-  if ( !file ) { cout << "File not found!" << endl; return 1; }
+  if ( !file ) { cout << "Error: Input file not found" << endl; return 1; }
   string fheader; file >> fheader;
-  if ( fheader != "P3" ) { cout << "Wrong file type!" << endl; return 1; }
+  if ( fheader != "P3" ) { cout << "Error: Input file wrong type" << endl; return 1; }
+
+  // Processing
+	int width, height, max, r, g, b, gray; file >> width >> height >> max;
+  out << "P3\n" << width << ' ' << height << '\n' << max << endl;
+
+  while ( file >> r >> g >> b ) 
+  {
+    gray = ( r+g+b ) / 3;
+		out << gray << ' ' << gray << ' ' << gray << ' ';
+	}
 
   // Housekeeping
   file.close();
