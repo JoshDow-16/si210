@@ -1,0 +1,9 @@
+John child
+Dennis adult
+Margaret adult
+Ken adult
+Barbara child
+Linus child
+Grace child
+Frances adult
+

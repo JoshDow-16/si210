@@ -1,0 +1,13 @@
+John 09/04/01       child
+Dennis 09/09/00     adult
+Margaret 08/17/00   adult
+Ken 12/17/20        adult
+Barbara 11/07/00    child  *
+Linus 09/28/00      child
+Grace 12/09/06      child
+Frances 08/04/32    adult
+
+4 a, 4 c
+
+
+1st 5 a, 3 c
