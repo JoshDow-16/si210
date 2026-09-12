@@ -12,8 +12,8 @@ int main ()
   // Check File
   ifstream file( fi );
   if ( !file ) { cout << "File not found!" << endl; return 1; }
-  string fheader; file >> fheader;
-  if ( fheader != "P3" ) { cout << "Wrong file type!" << endl; return 1; }
+  string fhead; file >> fhead;
+  if ( fhead != "P3" ) { cout << "Wrong file type!" << endl; return 1; }
 
   // Processing
   int width, height, max, r, g, b; file >> width >> height >> max;

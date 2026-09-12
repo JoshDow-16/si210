@@ -13,8 +13,8 @@ int main ()
   // Check File
   ifstream file( fi ); ofstream out( o );
   if ( !file ) { cout << "Error: Input file not found" << endl; return 1; }
-  string fheader; file >> fheader;
-  if ( fheader != "P3" ) { cout << "Error: Input file wrong type" << endl; return 1; }
+  string fhead; file >> fhead;
+  if ( fhead != "P3" ) { cout << "Error: Input file wrong type" << endl; return 1; }
 
   // Processing
 	int width, height, max, r, g, b, gray; file >> width >> height >> max;
