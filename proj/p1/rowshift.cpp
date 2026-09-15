@@ -19,24 +19,18 @@ int main ()
   if ( !( fhead == "P3" && fhead2 == "P3" ) ) { cout << "Error: Input file wrong type" << endl; return 1; }
 
   // Preprocessing
-  int w, h; file2 >> w >> h;
-  file >> fi >> fi >> fi; file2 >> fi2; out << "P3\n" << w << ' ' << h << '\n' << fi << endl;
+  int w1, h1, w2, h2; file >> w1 >> h1; file2 >> w2 >> h2;
+  file >> fi >> fi >> fi; file2 >> fi2; out << "P3\n" << w2 << ' ' << h2 << '\n' << fi << endl;
 
   // Processing
-  int r, g, b;
-	for ( int i = 0; i < shift; i++ ) {
-		for ( int j = 0; j < w; j++ ) {
-		  file2 >> r >> g >> b;
-		  out << r << ' ' << g << ' ' << b << ' ';
+  int r1, r2, g1, g2, b1, b2;
+	for ( int i = 0; i < h2; i++ ) {
+		for ( int j = 0; j < w2; j++ ) {
+		  file2 >> r2 >> g2 >> b2;
+		  out << r2 << ' ' << g2 << ' ' << b2 << ' ';
   	}
   }
 
-/*  int r2, g2, b2;
-  while ( ( file >> r >> g >> b ) && ( file2 >> r2 >> g2 >> b2 ) )
-  {
-    if ( !( r && b ) && g ) { out << r2 << ' ' << g2 << ' ' << b2 << ' '; }
-    else { out << r << ' ' << g << ' ' << b << ' '; }
-  } */
   // Housekeeping
   file.close();
   file2.close();
