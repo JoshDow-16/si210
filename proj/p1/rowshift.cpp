@@ -24,12 +24,24 @@ int main ()
 
   // Processing
   int r1, r2, g1, g2, b1, b2;
-	for ( int i = 0; i < h2; i++ ) {
+	for ( int i = 0; i < shift; i++ ) {
 		for ( int j = 0; j < w2; j++ ) {
 		  file2 >> r2 >> g2 >> b2;
 		  out << r2 << ' ' << g2 << ' ' << b2 << ' ';
   	}
   }
+
+  for ( int i = shift; i < h2 ; i++ ) {
+		for ( int j = 0; j < w2; j++ ) {
+			file2 >> r2 >> g2 >> b2;
+			if ( j < w1 ) {
+				file >> r1 >> g1 >> b1;
+        if ( !( r1 && b1 ) && g1 ) { out << r2 << ' ' << g2 << ' ' << b2 << ' '; }
+				else { out << r1 << ' ' << g1 << ' ' << b1 << ' '; }
+			}
+			out << r2 << ' ' << g2 << ' ' << b2 << ' ';
+		}
+	}
 
   // Housekeeping
   file.close();
