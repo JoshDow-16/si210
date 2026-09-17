@@ -6,8 +6,7 @@ using namespace std;
 int main ()
 {
   // Grab Inputs
-  string fi;
-  cout << "Filename: "; cin >> fi;
+  string fi; cin >> fi;
 
   // Check File
   int width;
